@@ -1,11 +1,197 @@
-body{
-
-  background-color: red;
+:root{
+  --primary-color:#006666;
+  --secondary-color:#003366;
+  --accent-color:	#cccc00;
+  --bg-color:#D9CAB3;
+  --shadow-color:#8C7A6B;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+  scroll-behavior: smooth;
 }
+
+html{
+  padding: 0;
+  margin: 0;
+  background-color: #cc9900;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
 nav{
-  padding: 60px;
-  margin: 30px;
+  background: var(--primary-color);
+  color:var(--accent-color);
+  opacity: 0.9;
+  position: fixed;
+  display: flex;
+  width: 100%;
+}
 
+nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+}
 
+nav a:first-child{
+  margin-left: 10%;
+}
 
+nav a:hover {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* This is the header stuff */
+
+header{
+  background: radial-gradient(var(--primary-color), #cc9900 70%);
+  display: flex;
+  height: 100vh;
+}
+
+header div h2,
+header div p {
+  text-align: center;
+  margin: 0px;
+}
+
+div.headerFigure{
+  margin: auto;
+  width: 280px;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 3px 5px rgba(0,0,0,1);
+}
+
+header img{
+  width: 100%;
+  /* filter: sepia(1); */
+}
+
+header div.headerfigure h2,
+header div.headerfigure p{
+  text-align: center;
+  margin: 0 auto;
+}
+
+     /* styling the quote */
+blockquote{
+  margin: 3em auto;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5em;
+  width: 60%;
+}
+
+blockquote #saidby{
+  text-align: right;
+  font-size: 0.8em;
+}
+
+blockquote #saidby::before{
+  content: "-"
+}
+
+blockquote p:first-child::after,
+blockquote p:first-child::before{
+  content: '"'
+}
+     /* main portfolio css */
+main{
+  margin: 3em auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+main figure{
+  margin: 0;
+  background: rgba(225, 255, 255, 0.3);
+  transition: filter 0.5s;
+}
+
+main figure img {
+  width:100%;
+}
+
+main figure figcaption h2,
+main figure figcaption p {
+  color: var(--primary-color);
+  text-align: center;
+  margin: 0;
+  margin-top: 0.5em 0 0 0;
+  padding: 0.1em;
+}
+
+main figure:hover{
+  filter: drop-shadow(8px 8px 10px red) hue-rotate(-0.5turn);
+  transition: filter 0.5s
+}
+
+#contact{
+  margin: 3em auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  grid-gap: 3em;
+}
+
+input[type="text"],
+select,
+textarea {
+  margin: 5px 0;
+  width: 100%;
+  padding: 1em;
+  border: 0 solid white;
+  background-color: var(--bg-color);
+  border-left: 5px solid var(--primary-color);
+  border-radius: 0;
+  resize: vertical;
+}
+
+input[type=submit]{
+  background-color: var(primary-color);
+  color: var(--accent-color);
+  padding: 12px 20px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  float: right;
+  width: 100%;
+}
+
+input[type=submit]:hover{
+  margin: 5px 0;
+  background-color: var(--primary-color);
+}
+
+#Contact iframe{
+  width: 100%;
+  height: 100%;
+  min-width: 280px;
+  min-height: 280px;
+}
+
+footer{
+  font-family: 'Fira Sans', sans-serif;
+  background-color:var(--primary-color);
+  text-align: center;
+  padding: 3em 0;
+}
+
+  footer ul{
+    background ;
+  color: var(--accent-color);
+  list-style-type:  none;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--accent-color);
 }
